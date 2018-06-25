@@ -1,6 +1,6 @@
 import DS from 'ember-data';
 
-export default RESTSerializer.extend({
+export default DS.RESTSerializer.extend({
   serialize(snapshot, options) {
     let json = this._super(...arguments);
     let request = {
