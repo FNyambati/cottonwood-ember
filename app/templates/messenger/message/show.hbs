@@ -1,0 +1,33 @@
+{{#if model}}
+  <div class="card w-80 border-info">
+    <div class="card-header">
+      <h3>
+        {{model.title}}
+        {{#unless noFile}}
+          <span class="float-right text-muted attachment-text">Attachment: {{model.attachment}}</span>
+        {{else}}
+          <span class="float-right text-muted attachment-text">No attachment included</span>
+        {{/unless}}
+      </h3>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <h4 class="card-text">{{model.content}}</h4>
+      </div>
+      <div class="row">
+        <p class="card-text message-date col-9 float-right"><small class="text-muted">Created: {{model.createdAt}}</small></p>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a {{action 'deletePost' post}} class="btn btn-danger">Delete</a>
+      {{#link-to 'messenger.message.edit' tagName="button" class="btn btn-primary float-right" }}Edit{{/link-to}}
+    </div>
+  </div>
+{{else}}
+  <div class="card w-80 border-info">
+    <div class="card-body">
+      <h2 class="card-title">Welcome to CottonWood Chat</h2>
+      <p class="card-text">Your feed is on the left, select a message to get started.</p>
+    </div>
+  </div>
+{{/if}}

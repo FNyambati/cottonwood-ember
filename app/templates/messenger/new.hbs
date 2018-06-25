@@ -1,0 +1,25 @@
+<div class="card w-80 border-info">
+  <form>
+    <div class="card-header">
+      <h2>New Post</h2>
+      <div class="form-group">
+        <label for="exampleFormControlFile1">Example file input</label>
+        <input value={{postAttachment}} type="file" class="form-control-file" id="message-attachment">
+      </div>
+      <div class="form-group">
+        <label for="message-title">Title</label>
+        <input value= {{postTitle}} type="text" class="form-control" id="message-title">
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="form-group">
+        <label for="message-content">Content</label>
+        <textarea value= {{postContent}} type="text" class="form-control" id="message-content"></textarea>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a class="btn btn-warning">Cancel</a>
+      <a {{action 'save'}} class="btn btn-success float-right">Save</a>
+    </div>
+  </form>
+</div>

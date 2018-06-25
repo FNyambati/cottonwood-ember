@@ -1,0 +1,21 @@
+.card {
+  margin-bottom: 5%;
+}
+.card-text {
+  margin-left: 2%;
+}
+.message-date {
+  margin-top: 4%;
+}
+.attachment-text {
+  font-size: 12px;
+  line-height: 1.8rem;
+  color: #fefefe;
+}
+.create-message-btn {
+  margin-bottom: 3%;
+}
+h1 {
+  margin-bottom: 5%;
+  text-align: center;
+}

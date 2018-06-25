@@ -1,0 +1,19 @@
+<h2>{{title}}</h2>
+
+{{#each messages as |post|}}
+  <article class="post">
+    <h3>{{post.title}}</h3>
+    <div class="post-content">
+      <span>Content:</span> {{post.info}}
+    </div>
+    <div class="post-attachment">
+      <span>Attached:</span> {{post.attachment}}
+    </div>
+    <div class="post-date">
+      <span>Created:</span> {{post.createdAt}}
+    </div>
+    <div>
+      <button {{action 'deletePost' id}}>Delete</button>
+    </div>
+  </article>
+{{/each}}

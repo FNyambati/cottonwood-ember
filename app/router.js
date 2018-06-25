@@ -7,6 +7,13 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('messenger', function() {
+    this.route('message', {path: ':post_id'}, function() {
+      this.route('show')
+      this.route('edit')
+    })
+    this.route('new')
+  })
 });
 
 export default Router;
